@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edittextborder_new"
+            android:paddingLeft="10dp"
+            android:drawablePadding="5dp"
+            android:hint="Start Date"
+            android:editable="false"
+            android:id="@+id/exp_rpt_edit_date"
+            android:textColorHint="@color/blackcolour"
+            android:textColor="@color/blackcolour"
+            />
+        <ImageView
+            android:id="@+id/exp_rpt_img_date"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/calendar"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edittextborder_new"
+            android:paddingLeft="10dp"
+            android:drawablePadding="5dp"
+            android:hint="End Date"
+            android:editable="false"
+            android:id="@+id/exp_rpt_edit_date2"
+            android:textColorHint="@color/blackcolour"
+            android:textColor="@color/blackcolour"
+            />
+        <ImageView
+            android:id="@+id/exp_rpt_img_date2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/calendar"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_date_exp_show_data"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="Show data"
+        android:textColor="@color/whitecolour"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/logsignborder"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <TableLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:shrinkColumns="*"
+          android:stretchColumns="*"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentStart="true">
+
+          <TableRow
+
+              android:layout_height="match_parent"
+              android:layout_width="match_parent">
+
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="0.5"
+                  android:width="10dp"
+                  android:text="ID"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="6"
+                  android:width="60dp"
+                  android:text="Date"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="6"
+                  android:width="50dp"
+                  android:text="Amt"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="0.5"
+                  android:width="60dp"
+                  android:text="Category"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+          </TableRow>
+
+      </TableLayout>
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_marginTop="05dp"
+          android:id="@+id/recycler_exp_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+      <TableLayout
+          android:layout_marginTop="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:shrinkColumns="*"
+          android:stretchColumns="*"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentStart="true">
+
+          <TableRow
+
+              android:layout_height="match_parent"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:layout_weight="0.5"
+                  android:width="10dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+              <TextView
+                  android:textStyle="bold"
+                  android:textColor="@color/blackcolour"
+                  android:text="Total Expense:"
+                  android:layout_weight="6"
+                  android:width="60dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:textStyle="bold"
+                  android:textColor="@color/blackcolour"
+                  android:id="@+id/list_total"
+                  android:background="@drawable/edit_text_border"
+                  android:layout_weight="6"
+                  android:width="50dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:layout_weight="0.5"
+                  android:width="60dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+          </TableRow>
+
+      </TableLayout>
+  </LinearLayout>
+
+</LinearLayout>

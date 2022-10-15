@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/expensive"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="10dp"
+                    android:background="#FFFFFF"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/edit_linaer"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                           >
+                            <EditText
+                                android:layout_width="260dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/edittextborder_new"
+                                android:paddingLeft="10dp"
+                                android:drawablePadding="5dp"
+                                android:hint="Select Date"
+                                android:id="@+id/edit_date"
+                                android:textColorHint="@color/blackcolour"
+                                android:editable="false"
+                                android:textColor="@color/blackcolour"
+                                />
+                            <ImageView
+                                android:id="@+id/img_date"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/calendar"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Category"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <Spinner
+                            android:id="@+id/spinner_exp_cat"
+                            android:background="@drawable/edittextborder_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                        </Spinner>
+
+                        <EditText
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:background="@drawable/edittextborder_new"
+                            android:paddingLeft="10dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Note"
+                            android:inputType="text"
+                            android:id="@+id/edit_note"
+                            android:textColorHint="@color/blackcolour"
+                            android:textColor="@color/blackcolour"
+                            />
+
+                        <EditText
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/edittextborder_new"
+                            android:paddingLeft="10dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Enter Amount"
+                            android:inputType="number"
+                            android:id="@+id/edit_exp_amt"
+                            android:textColorHint="@color/blackcolour"
+                            android:textColor="@color/blackcolour"
+                            />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_save_exp"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Add Expense"
+                        android:textColor="@color/whitecolour"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_border"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

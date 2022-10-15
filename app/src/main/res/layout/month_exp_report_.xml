@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="05dp"
+        android:text="Select Month"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp" />
+    <Spinner
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/spinner_rpt_exp_cat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/edittextborder_new"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_exp_show_data"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:text="View data"
+        android:textColor="@color/whitecolour"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/logsignborder"/>
+    <!--<Button
+        android:id="@+id/btn_pdf_export"
+        android:drawableRight="@drawable/pdf"
+        android:background="@drawable/logsignborder"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text=" Export to pdf"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="02dp"
+        />-->
+    </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <TableLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:shrinkColumns="*"
+          android:stretchColumns="*"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentStart="true">
+
+          <TableRow
+
+              android:layout_height="match_parent"
+              android:layout_width="match_parent">
+
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="0.5"
+                  android:width="10dp"
+                  android:text="ID"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="6"
+                  android:width="60dp"
+                  android:text="Date"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="6"
+                  android:width="50dp"
+                  android:text="Amt"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:background="@drawable/edittext_border"
+                  android:layout_weight="0.5"
+                  android:width="60dp"
+                  android:text="Category"
+                  android:textColor="#ffffff"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+          </TableRow>
+
+      </TableLayout>
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_marginTop="05dp"
+          android:id="@+id/recycler_exp_list"
+          android:layout_width="match_parent"
+          android:layout_height="450dp"
+          />
+      </LinearLayout>
+      </ScrollView>
+      <TableLayout
+          android:layout_marginTop="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:shrinkColumns="*"
+          android:stretchColumns="*"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentStart="true">
+
+          <TableRow
+
+              android:layout_height="match_parent"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:layout_weight="0.5"
+                  android:width="10dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+              <TextView
+                  android:textColor="@color/blackcolour"
+                  android:textStyle="bold"
+                  android:text="Total Expense:"
+                  android:layout_weight="6"
+                  android:width="60dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:textColor="@color/blackcolour"
+                  android:textStyle="bold"
+                  android:id="@+id/list_total"
+                  android:background="@drawable/edit_text_border"
+                  android:layout_weight="6"
+                  android:width="50dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+              <TextView
+                  android:layout_weight="0.5"
+                  android:width="60dp"
+                  android:layout_height="25dp"
+                  android:gravity="center"/>
+
+          </TableRow>
+
+      </TableLayout>
+  </LinearLayout>
+
+</LinearLayout>
